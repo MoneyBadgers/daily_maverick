@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Support Independent Journalism - Donate to the Daily Maverick</title>
     <script>
@@ -15,40 +16,225 @@
             document.getElementById('amountCents').value = amountCents;
         }
     </script>
+
+    <style>
+        .donatebutton {
+            background-color: #ea212e;
+            color: #fff;
+            font-size: 20px;
+            font-family: "Roboto", sans-serif;
+            padding: 15px 25px 15px 25px;
+            border-radius: 3px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+        }
+
+        input {
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            width: 50%;
+        }
+
+        a1 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        a1:before,
+        a1:after {
+            content: "";
+            flex: 1 1;
+            border-bottom: 0.5px solid #c1c1c1;
+            margin: auto;
+        }
+
+        .greytext {
+            font-weight: 800;
+            color: #666;
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        .iframeblockmain {
+            background-color: #f5f5f5;
+            padding: 40px;
+        }
+
+        @media only screen and (max-width: 640px) {
+            .iframeblockmain {
+                padding: 15px;
+            }
+        }
+
+        .iframeblocksub {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 35px;
+            max-width: 600px;
+            margin: auto;
+            border-bottom: 2px solid #ccc;
+        }
+
+        @media only screen and (max-width: 640px) {
+            .iframeblocksub {
+                padding: 20px;
+            }
+        }
+
+        .iframedonateblock {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            border-color: #c1c1c1;
+            border: 0.5px solid #c1c1c1;
+        }
+
+        @media only screen and (max-width: 640px) {
+            .iframedonateblock {
+                padding: 25px 20px;
+            }
+        }
+
+        .iframetitleblock {
+            background-color: #fff;
+            padding: 30px;
+            border-color: #;
+        }
+
+        @media only screen and (max-width: 640px) {
+            .iframetitleblock {
+                padding: 0px 0px 20px 0px;
+            }
+        }
+
+        .DMlogo {
+            max-width: 100px;
+            margin-bottom: 0px;
+        }
+
+        @font-face {
+            font-family: dm;
+            src: url(https://www.dailymaverick.co.za/wp-content/themes/daily-maverick/fonts/Georgia.woff2);
+        }
+
+        .headlinefont {
+            font-family: dm;
+            font-size: 35px;
+            color: #BA1717;
+            line-height: 1.3em;
+        }
+
+        .p-1 {
+            font-size: 18px;
+            color: #000;
+            line-height: 1.5em;
+            margin-left: 20px;
+            font-family: dmp;
+        }
+
+        .p-2 {
+            font-size: 16px;
+            color: #000;
+            font-weight: 400;
+            line-height: 1.5em;
+            font-family: dmp;
+        }
+
+        @font-face {
+            font-family: dmp;
+            src: url(https://www.dailymaverick.co.za/cf-fonts/s/roboto/5.0.11/latin/300/normal.woff2);
+        }
+
+
+        .red_quote_line {
+            border-left: 4px solid;
+            border-color: #BA1717;
+        }
+
+        .subheadlinefont {
+            color: #000;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 1.2em;
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-        <h1>Support Independent Journalism</h1>
-        <p>Your contribution helps us continue our mission of independent, fearless, and credible journalism. By donating to the Daily Maverick, you're supporting quality journalism that matters.</p>
-    </header>
-    
-    <section>
-        <h2>Donate with Cryptocurrency</h2>
-        <p>At the Daily Maverick, we're constantly pushing boundaries and exploring new ways to support our mission. That's why we're excited to announce that we now accept donations in cryptocurrency. This aligns with our values of innovation and independence, allowing us to reach new audiences and supporters who share our commitment to independent journalism.</p>
-        
-        <p>Your donation helps us keep our content free and accessible to all. Join us in our mission to inform, inspire, and empower through fearless journalism.</p>
-        
+    <div class="iframeblockmain">
+        <div class="iframeblocksub">
 
-        <label for="amount">Amount (Rands):</label>
-        <input type="number" id="amount" name="amount" onchange="setAmountCents()" required><br><br>
+            <center><img class="DMlogo"
+                    src="https://www.dailymaverick.co.za/wp-content/themes/daily-maverick/images/dm-masthead.svg"
+                    style="max-width: 500px;">
+            </center>
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" onchange="setOrderId()" required><br><br>
+            <div class="greytext">
+                <a1>&nbsp;&nbsp;Defend Truth&nbsp;&nbsp;</a1>
+            </div><br>
 
-        <form id="donationForm" action="https://pay.cryptoqr.co.za/" method="GET" target="_BLANK">
-            
-            <input type="hidden" id="merchantCode" name="merchantCode" value="dm">
-            <input type="hidden" id="amountCents" name="amountCents" value="">
-            <input type="hidden" id="description" name="description" value="Donation to Daily Maverick">
-            <input type="hidden" id="orderId" name="orderId" value="">
+            <div class="iframetitleblock">
 
-            <button type="submit">Donate</button>
-        </form>
-    </section>
-    
-    <footer>
-        <p>Your donation is secure and supports independent journalism. Thank you for your support!</p>
-        <p>The Daily Maverick is a registered non-profit organization. Donations are tax-deductible.</p>
-    </footer>
+                <div class="headlinefont">Support Independent Journalism</div>
+                <br>
+                <div class="red_quote_line">
+                    <div class="p-1">Your contribution helps us continue our mission of independent, fearless, and
+                        credible
+                        journalism. By donating to the Daily Maverick, you're supporting quality journalism that
+                        matters.
+                    </div>
+                </div>
+            </div>
+
+            <div class="iframedonateblock">
+                <div class="subheadlinefont">Donate with Cryptocurrency</div><br>
+
+                <p class="p-2">
+                    At the Daily Maverick, we're constantly pushing boundaries and exploring new ways to
+                    support our mission. That's why we're excited to announce that we now accept donations in
+                    cryptocurrency. This aligns with our values of innovation and independence, allowing us to reach new
+                    audiences and supporters who share our commitment to independent journalism.
+                </p>
+
+                <p class="p-2">
+                    Your donation helps us keep our content free and accessible to all. Join us in our mission to
+                    inform, inspire, and empower through fearless journalism.
+                </p>
+
+                <label class="p-2" for="amount">Amount (Rands):</label>
+
+                <input type="number" id="amount" name="amount" onchange="setAmountCents()" value="250" required><br><br>
+
+                <label class="p-2" for="email">Your Email Address:</label>
+                <input type="email" id="email" name="email" onchange="setOrderId()" required><br><br>
+
+                <form id="donationForm" action="https://pay.cryptoqr.co.za/" method="GET" target="_BLANK">
+
+                    <input type="hidden" id="merchantCode" name="merchantCode" value="dm">
+                    <input type="hidden" id="amountCents" name="amountCents" value="25000">
+                    <input type="hidden" id="description" name="description" value="Donation to Daily Maverick">
+                    <input type="hidden" id="orderId" name="orderId" value="">
+
+                    <button type="submit" class="donatebutton">
+                        Donate
+                    </button>
+                </form>
+
+                <br>
+
+                <p class="p-2">Your donation is secure and supports independent journalism. Thank you for your
+                    support!<br><br>The Daily Maverick is a registered non-profit organization. Donations are
+                    tax-deductible.
+                </div>
+            </div>
+        </div>
 </body>
+
 </html>
