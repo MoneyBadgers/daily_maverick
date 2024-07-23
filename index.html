@@ -9,6 +9,7 @@
             var timestamp = new Date().getTime();
             var orderId = email + '-' + timestamp;
             document.getElementById('orderId').value = orderId;
+            document.getElementById('userId').value = email;
         }
         function setAmountCents() {
             var amount = document.getElementById('amount').value;
@@ -221,6 +222,7 @@
                     <input type="hidden" id="amountCents" name="amountCents" value="25000">
                     <input type="hidden" id="description" name="description" value="Donation to Daily Maverick">
                     <input type="hidden" id="orderId" name="orderId" value="">
+                    <input type="hidden" id="userId" name="userId" value="">
 
                     <button type="submit" class="donatebutton">
                         Donate
